@@ -14,7 +14,6 @@ class App extends React.Component {
   render() {
     return (
         <div>
-            <BrowserRouter>
               <div>
                 <Link to="/fun">Fun</Link>
                 <Route path="/fun" component={Fun} />
@@ -25,7 +24,6 @@ class App extends React.Component {
                 <Link to="/plums">Plum</Link>
                 <Route path="/plums" component={Plums} />
               </div>
-            </BrowserRouter>
         </div>
     );
   }
