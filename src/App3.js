@@ -17,7 +17,7 @@ class App extends React.Component {
     //mock authentication
     setTimeout(()=>{this.setState({authenticated:true});}, 3000);
 
-    //loads until authenticated, if not then bleh
+    //loading until authenticated
     return (!(props.authenticated) ? (<div>Checking</div>) : <HomeRoutes {...props} />); //3
   }
 
@@ -25,7 +25,7 @@ class App extends React.Component {
     return (
         <div>
           <Link to="/checkit">Check Auth</Link>
-          <Route path="/checkit" render={(this.authenticateThis)} {...this.state} />{/*2*/}
+          <Route path="/checkit" component={(this.authenticateThis)} {...this.state} />{/*2*/}
         </div>
     );
   }
