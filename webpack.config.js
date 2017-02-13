@@ -3,8 +3,7 @@ var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const VENDOR_LIBS = [
-  'react', 'lodash', 'redux', 'react-redux', 'react-dom',
-  'faker', 'react-input-range', 'redux-form', 'redux-thunk'
+  'react','react-dom', 'react-router-dom'
 ];
 
 module.exports = {
@@ -14,7 +13,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, 'dist'),
-    filename: '[name].[chunkhash].js'
+    filename: '[name].[chunkhash].js',
   },
   module: {
     rules: [
